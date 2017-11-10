@@ -98,7 +98,7 @@ RUN set -x \
   && ln -s /usr/local/bin/decapod-admin /usr/local/bin/admin \
   && ln -s /usr/local/bin/decapod-admin-wait /usr/local/bin/admin-wait \
   && cp ./scripts/debug_snapshot.py /debug-snapshot \
-  && curl https://getcaddy.com | bash \
+  && curl https://getcaddy.com | bash -s personal \
   && curl --silent --show-error --fail --location -o /usr/local/bin/jp https://github.com/jmespath/jp/releases/download/0.1.2/jp-linux-amd64 \
   && chmod +x /usr/local/bin/jp \
   && mkdir -p /www/monitoring /www/docs \
